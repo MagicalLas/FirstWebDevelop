@@ -7,24 +7,78 @@ FWD is GSM web development study in 2018. Using node.js, vue.js, and make morden
 
 TBD
 
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+Say what the step will be
+
+```
+Give the example
+```
+
+And repeat
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo
+
+## Running the tests
+
+Explain how to run the automated tests for this system
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
 ## How To Contribute
 
 Contributions are always welcome, either reporting issues/bugs or forking the repository and then issuing pull requests when you have completed some additional coding that you feel will be beneficial to the main project. If you are interested in contributing in a more dedicated capacity, then please contact me.
 
-## Contact
+### And coding style tests
 
-You can contact me via e-mail (haho6629 at gmail.com).
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Versioning
+
+We use GIt for versioning. For the versions available, see the [this repository](https://github.com/Las-Wonho/Network_School). 
+
+## Authors
+
+* **Wonho Ha** - *Initial work* - [Github](https://github.com/Las-Wonho)
+- [Unperknown](http://www.github.com/Unperknown)
+- [Mixergi](http://www.github.com/Mixergi)
+- [DawonChoi](http://www.github.com/DawonChoi)
 
 ## License
 
-<img align="right" src="http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png">
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-The class is licensed under the [MIT License](http://opensource.org/licenses/MIT):
-
-Copyright &copy; 2018 [Wonho Ha](http://www.github.com/Las-Wonho).
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+- this README using PurpleBooth's [Template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
