@@ -68,7 +68,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Versioning
 
-We use GIt for versioning. For the versions available, see the [this repository](https://github.com/Las-Wonho/Network_School). 
+We use GIt for versioning. For the versions available, see the [this repository](https://github.com/Las-Wonho/FirstWebDevelop/).
 
 ## Authors
 
@@ -79,6 +79,6 @@ We use GIt for versioning. For the versions available, see the [this repository]
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Las-Wonho/FirstWebDevelop/LICENSE.md) file for details
 
 - this README using PurpleBooth's [Template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
