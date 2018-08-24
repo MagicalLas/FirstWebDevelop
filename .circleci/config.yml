@@ -32,7 +32,6 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            apt-get install firefox
             pip install -r requirements.txt
 
       - save_cache:
