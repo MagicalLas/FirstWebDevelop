@@ -50,6 +50,16 @@ jobs:
             . venv/bin/activate
             cd Server
             python server.py
+
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports
+      - run:
+          name: run server
+          command: |
+            . venv/bin/activate
+            cd Server
+            python server.py
             cd test
             pytest
 
