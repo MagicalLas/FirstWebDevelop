@@ -7,6 +7,6 @@ def test():
 
 
 def test_server():
-    driver = webdriver.Firefox()
-    driver.get('https://naver.com/')
+    driver = webdriver.Chrome()
+    driver.get('http://localhost')
     assert 1
