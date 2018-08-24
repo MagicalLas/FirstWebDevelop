@@ -31,8 +31,8 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            apt-get update
-            apt-get install firefox
+            sudo apt-get update
+            sudo apt-get install firefox
             pip install -r requirements.txt
 
       - save_cache:
@@ -50,7 +50,7 @@ jobs:
           command: |
             . venv/bin/activate
             cd Server
-            python server.py &
+            python server.py
           background: true
             
       - store_artifacts:
