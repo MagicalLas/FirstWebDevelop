@@ -53,6 +53,10 @@ jobs:
             cd Server
             python server.py
 
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports
+          
       - run:
         name: run test
         command: |
