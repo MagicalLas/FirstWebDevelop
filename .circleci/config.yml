@@ -31,8 +31,8 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            apt-get update
-            apt-get install firefox
+            sudo apt-get update
+            sudo apt-get install firefox
             pip3 install selenium==3.0.2
             wget https://github.com/mozilla/geckodriver/releases/download/v0.14.0/geckodriver-v0.14.0-linux64.tar.gz -O /tmp/geckodriver.tar.gz && tar -C /opt -xzf /tmp/geckodriver.tar.gz && chmod 755 /opt/geckodriver && ln -fs /opt/geckodriver /usr/bin/geckodriver && ln -fs /opt/geckodriver /usr/local/bin/geckodriver
             pip install -r requirements.txt
