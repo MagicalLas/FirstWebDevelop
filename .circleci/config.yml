@@ -49,19 +49,17 @@ jobs:
           command: |
             . venv/bin/activate
             cd Server
-            python server.py
-
+            cd test
+            pytest
+            
       - store_artifacts:
           path: test-reports
           destination: test-reports
       - run:
-          name: run server
+          name: run end
           command: |
             . venv/bin/activate
-            cd Server
-            python server.py
-            cd test
-            pytest
+            echo "Las-Wonho"
 
       - store_artifacts:
           path: test-reports
