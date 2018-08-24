@@ -63,6 +63,7 @@ jobs:
           command: |
             . venv/bin/activate
             echo "Las-Wonho"
+            cd Server
             cd test
             pytest
 
