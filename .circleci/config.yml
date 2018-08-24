@@ -50,6 +50,8 @@ jobs:
             . venv/bin/activate
             cd Server
             python server.py &
+            cd test
+            pytest
             
       - store_artifacts:
           path: test-reports
@@ -61,8 +63,7 @@ jobs:
             . venv/bin/activate
             echo "Las-Wonho"
             cd Server
-            cd test
-            pytest
+            
 
       - store_artifacts:
           path: test-reports
