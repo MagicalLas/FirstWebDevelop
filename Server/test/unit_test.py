@@ -9,3 +9,4 @@ def test():
 def test_server():
     driver = webdriver.Firefox()
     driver.get('https://naver.com/')
+    assert 1
