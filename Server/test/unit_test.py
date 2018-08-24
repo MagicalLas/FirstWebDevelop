@@ -10,4 +10,4 @@ def test_server():
     driver = webdriver.Chrome()
     driver.get('http://localhost:5000')
 
-    assert driver.find_element_by_xpath('/html/body/pre').text == "Hello World!"
+    assert driver.find_element_by_xpath('/html/body').text == "Hello World!"
