@@ -8,5 +8,6 @@ def test():
 
 def test_server():
     driver = webdriver.Chrome()
-    driver.get('http://localhost')
-    assert 1
+    driver.get('http://localhost:5000')
+
+    assert driver.find_element_by_xpath('/html/body/pre').text == "Hello World!"
