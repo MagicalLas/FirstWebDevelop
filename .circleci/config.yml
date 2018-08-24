@@ -56,12 +56,11 @@ jobs:
       - store_artifacts:
           path: test-reports
           destination: test-reports
-          
+
       - run:
         name: run test
         command: |
           . venv/bin/activate
-          cd Server
           cd test
           pytest
 
