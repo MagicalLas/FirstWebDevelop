@@ -31,6 +31,8 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
+            apt-get update
+            apt-get install firefox
             pip install -r requirements.txt
 
       - save_cache:
@@ -49,6 +51,7 @@ jobs:
             . venv/bin/activate
             cd Server
             python server.py &
+          background: true
             
       - store_artifacts:
           path: test-reports
