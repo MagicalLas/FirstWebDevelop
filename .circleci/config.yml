@@ -8,8 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:3.6.2
-      
+      - image: circleci/python:3.7.0-node-browsers
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -32,6 +31,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
+            sudo apt-get update
             pip install -r requirements.txt
 
       - save_cache:
@@ -45,14 +45,26 @@ jobs:
       # https://pytest.org
       # https://nose.readthedocs.io
       - run:
-          name: run tests
+          name: run server
           command: |
             . venv/bin/activate
             cd Server
+            python server.py &
             cd test
             pytest
+            
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports
+
+      - run:
+          name: run end
+          command: |
+            . venv/bin/activate
+            echo "Las-Wonho"
+            cd Server
+            
 
       - store_artifacts:
           path: test-reports
           destination: test-reports
-          
