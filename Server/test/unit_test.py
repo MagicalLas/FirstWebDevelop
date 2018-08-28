@@ -15,3 +15,9 @@ def test_server():
     driver.get('http://localhost:5000/project')
 
     assert driver.find_element_by_xpath('/html/body').text == 'This is FWD Project'
+
+    driver.get('http://localhost:5000/main')
+
+    driver.find_element_by_tag_name('a').click()
+
+    assert driver.find_element_by_xpath('/html/body').text == 'This is FWD Project'
