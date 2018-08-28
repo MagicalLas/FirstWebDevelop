@@ -6,7 +6,7 @@ def index():
     return 'Hello World!'
 
 @app.route('/project')
-def index():
+def index_():
     return 'This is FWD Project'
 
 if __name__ == '__main__':
