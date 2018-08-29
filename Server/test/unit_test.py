@@ -10,8 +10,5 @@ def test_server():
     driver = webdriver.Chrome()
     driver.get('http://localhost:5000')
 
-    assert driver.find_element_by_xpath('/html/body').text == "Hello World!"
+    assert driver.find_element_by_xpath('/html/body/h1[2]').text == "Welcome to our site!"
     
-    driver.get('http://localhost:5000/project')
-
-    assert driver.find_element_by_xpath('/html/body').text == 'This is FWD Project'
