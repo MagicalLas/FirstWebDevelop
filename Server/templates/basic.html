@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% block title %}Base HTML - need to be changed{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='style.css') }}" />
-    <script src="{{ url_for('static', filename='system.js') }}"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('css', filename='style.css') }}" />
+    <script src="{{ url_for('js', filename='system.js') }}"></script>
     {% endblock %}
 </head>
 <body>
