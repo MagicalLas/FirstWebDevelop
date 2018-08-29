@@ -11,4 +11,3 @@ def test_server():
     driver.get('http://localhost:5000')
 
     assert driver.find_element_by_xpath('/html/body/h1[2]').text == "Welcome to our site!"
-    
