@@ -17,7 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+pip install -r requirements.txt
 ```
 
 ### Installing
@@ -42,12 +42,10 @@ End with an example of getting some data out of the system or using it for a lit
 
 Explain how to run the automated tests for this system
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
 ```
-Give an example
+cd Server
+cd test
+pytest
 ```
 
 ## How To Contribute
@@ -56,11 +54,7 @@ Contributions are always welcome, either reporting issues/bugs or forking the re
 
 ### And coding style tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
+We using PEP8
 
 ## Deployment
 
@@ -76,7 +70,7 @@ We use GIt for versioning. For the versions available, see the [this repository]
 - [Unperknown](http://www.github.com/Unperknown)
 - [Mixergi](http://www.github.com/Mixergi)
 - [DawonChoi](http://www.github.com/DawonChoi)
-
+- [octavesop](http://www.github.com/octavesop)
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Las-Wonho/FirstWebDevelop/LICENSE.md) file for details
