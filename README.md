@@ -71,6 +71,7 @@ We use GIt for versioning. For the versions available, see the [this repository]
 - [Mixergi](http://www.github.com/Mixergi)
 - [DawonChoi](http://www.github.com/DawonChoi)
 - [octavesop](http://www.github.com/octavesop)
+- [eunsun](https://github.com/1463)
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Las-Wonho/FirstWebDevelop/LICENSE.md) file for details
