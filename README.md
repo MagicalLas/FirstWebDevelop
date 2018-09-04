@@ -7,6 +7,8 @@ FWD is GSM web development study in 2018. Using node.js, vue.js, and make morden
 
 TBD
 
+## 로고
+![FWD](https://github.com/Las-Wonho/FirstWebDevelop/blob/master/Main.png)
 
 ## Getting Started
 
