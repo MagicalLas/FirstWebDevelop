@@ -5,4 +5,14 @@
 {% endblock %}
 {% block body %}
 <h1>SIGN IN, whenever you want.</h1>
+{% if error %}
+    <p class=error><strong>Literally ERROR! What is that?</strong> {{ error }}
+{% endif %}
+<form method=post>
+    Username:
+    <input type=text name=username value="{{ request.form.username }}">
+    Password:
+    <input type=password name=password>
+    <input type=submit value=Login>
+</form>
 {% endblock %}

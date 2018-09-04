@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, flash, redirect, render_template, request, url_for
 app = Flask(__name__)
+app.secret_key = 'Literally secret'
 
 @app.route('/')
 def index():
@@ -9,9 +10,16 @@ def index():
 def index_when_signed_in(name):
     return render_template('home.html', name=name)
 
-@app.route('/login/')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template('sign_in.html')
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'admin' or request.form['password'] != 'secret':
+            error = 'Login Failed.'
+        else:
+            flash('Login Success!')
+            return redirect(url_for('index'))
+    return render_template('sign_in.html', error=error)
 
 @app.route('/info/')
 def info():
