@@ -4,51 +4,82 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>메인페이지</title>
+    <title>FWP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-</head>
-<style>
-    .BOX {
-        animation: _ 1s 0s forwards;
-
-        width: 300px;
-        height: 300px;
-
-
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%) rotateZ(45deg);
-
-        background-color: rgb(236, 101, 101);
-    }
-
-    @keyframes _ {
-        0% {}
-        100% {}
-    }
-
-    @keyframes main_ {
-        0% {}
-        100% {
-            transform: translateX(-50%) translateY(-50%) rotateZ(270deg);
+    <style>
+        body {
+            overflow: hidden;
         }
-    }
-</style>
 
-<body>
+        .MainSqure {
+
+            animation: _ 1s 2s forwards;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateZ(45deg);
+            width: 400px;
+            height:400px;
+            background-color: rgb(236, 101, 101);
+        }
+
+        @keyframes _ {
+            0% {}
+            100% {}
+        }
+
+        @keyframes rotate90 {
+            0% {
+                transform: translate(-50%, -50%) rotateZ(45deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotateZ(270deg);
+            }
+        }
+
+        .back {
+
+            animation: _ 1.5s 2s forwards;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 1000%;
+            height: 300px;
+            transform: translate(-50%, -50%) rotateZ(45deg);
+            background-color: rgb(98, 221, 255);
+        }
+
+        .center {
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: auto;
+        }
+    </style>
+
     <script>
+        function s(params) {
 
-        function s(params) {   
-            document.getElementsByClassName(params)[0].style.setProperty("animation","main_");
+            document.getElementsByClassName(params)[0].style.setProperty("animation", "rotate90");
+            document.getElementsByClassName(params)[0].style.setProperty("animation-duration", "1.5s");
+            document.getElementsByClassName(params)[0].style.setProperty("animation-fill-mode", "forwards");
 
-                document.getElementsByClassName(params)[0].style.setProperty("animation-duration","2s");
-                document.getElementsByClassName(params)[0].style.setProperty("animation-fill-mode","forwards");
         }
     </script>
+</head>
 
-    <div class="BOX" onmouseenter="s('BOX');" ></div>
+<body>
+
+    <div class="MainSqure" >
+        <div class="back">
+            FWD
+        </div>
+    </div>
+    
+    <img src="../Main.PNG" class="center" onmousedown="s('MainSqure');"/>
 </body>
 
 </html>
