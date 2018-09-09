@@ -5,3 +5,4 @@ numpy
 flask-script
 flask-bootstrap
 flask-moment
+Jinja2

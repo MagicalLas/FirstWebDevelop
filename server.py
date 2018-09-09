@@ -1,5 +1,6 @@
 from flask import Flask, flash, redirect, render_template, request, url_for
-app = Flask(__name__)
+import jinja2
+app = Flask(__name__, template_folder="Client/doc")
 app.secret_key = 'Literally secret'
 
 
@@ -20,17 +21,17 @@ def login():
         else:
             flash('Login Success!')
             return redirect(url_for('index'))
-    return render_template('sign_in.html', error=error)
+    return render_template('doc/sign_in.html', error=error)
 
-@app.route('/info/')
+@app.route('/info')
 def info():
     return render_template('info.html')
 
-@app.route('/gallery/')
+@app.route('/gallery')
 def gall():
     return render_template('gallery.html')
 
-@app.route('/stat/')
+@app.route('/stat')
 def stat():
     return render_template('stat.html')
 
@@ -41,11 +42,6 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('500.html'), 500
-
-@app.route('/main')
-def main_page():
-    return '<h1>MAIN PAGES</h1>'
-
 
 if __name__ == '__main__':
     app.run()
