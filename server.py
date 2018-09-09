@@ -1,5 +1,4 @@
 from flask import Flask, flash, redirect, render_template, request, url_for
-import jinja2
 app = Flask(__name__, template_folder="Client/doc")
 app.secret_key = 'Literally secret'
 
@@ -21,7 +20,7 @@ def login():
         else:
             flash('Login Success!')
             return redirect(url_for('index'))
-    return render_template('doc/sign_in.html', error=error)
+    return render_template('sign_in.html', error=error)
 
 @app.route('/info')
 def info():
