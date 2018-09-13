@@ -1,7 +1,7 @@
 pytest
 selenium
-flask
 numpy
+flask
 flask-script
 flask-bootstrap
 flask-moment
