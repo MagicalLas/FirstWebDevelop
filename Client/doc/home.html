@@ -1,22 +1,15 @@
-{% extends "basic.html" %}
-{% block title %}Home{% endblock %}
-{% block head %}
-    {{ super() }}
-{% endblock %}
-{% block body %}
-{% if name %}
-<h1>Welcome to our site, {{ name|title }}!</h1>
-{% else %}
-<h1>Welcome to our site!</h1>
-{% endif %}
-{% with messages = get_flashed_messages() %}
-    {% if messages %}
-        <ul class=flashes>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-{% endwith %}
-<input type="button" value="Click!" onclick="hello()">
-{% endblock %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>이름</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <img src="{{url_for('static', filename='Main.PNG')}}">
+</body>
+
+</html>
