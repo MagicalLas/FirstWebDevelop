@@ -4,7 +4,7 @@ app.secret_key = 'Literally secret'
 
 
 @app.route('/')
-def index():
+def home():
     return render_template('home.html')
 
 @app.route('/user/<name>')
