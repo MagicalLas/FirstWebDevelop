@@ -11,16 +11,9 @@ def home():
 def index_when_signed_in(name):
     return render_template('home.html', name=name)
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['POST'])
 def login():
-    error = None
-    if request.method == 'POST':
-        if request.form['username'] != 'admin' or request.form['password'] != 'secret':
-            error = 'Login Failed.'
-        else:
-            flash('Login Success!')
-            return redirect(url_for('index'))
-    return render_template('sign_in.html', error=error)
+    return "true"
 
 @app.route('/info')
 def info():
