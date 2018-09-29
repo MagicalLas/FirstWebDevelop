@@ -4,5 +4,6 @@ MAINTAINER Las-Wonho haho6629@gmail.com
 
 COPY . .
 
-RUN apt-get update\
-    pip install -r requirements.txt
+RUN apt-get update
+
+RUN pip install -r requirements.txt
