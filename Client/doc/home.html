@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>이름</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Hexagon.css')}}">
 </head>
 <style>
     .MainLogo {
@@ -34,19 +35,82 @@
         right: 50%;
         background-color: cornflowerblue;
     }
+
+    .hex {
+        width: 15%;
+        /* = 100 / 5 */
+    }
+
+    .hex:nth-child(2n+1) {
+        /* first hexagon of even rows */
+        margin-left: 8%;
+        /* = width of .hex / 2  to indent even rows */
+    }
+
+    .hex h1,
+    .hex p {
+        width: 100%;
+        padding: 5%;
+        box-sizing: border-box;
+        background-color: rgb(82, 140, 248, 0.9);
+        font-weight: 300;
+        -webkit-transition: -webkit-transform .2s ease-out, opacity .3s ease-out;
+        transition: transform .2s ease-out, opacity .3s ease-out;
+    }
+
+    .hex h1 {
+        bottom: 50%;
+        padding-top: 50%;
+        font-size: 1.5em;
+        z-index: 1;
+        -webkit-transform: translate3d(0, -100%, 0);
+        -ms-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    .hex h1::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        width: 10%;
+        text-align: center;
+        border-bottom: 1px solid #fff;
+    }
+
+    .hex p {
+        top: 50%;
+        padding-bottom: 50%;
+        -webkit-transform: translate3d(0, 100%, 0);
+        -ms-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
 </style>
 
-<body>
-    <div class="Center_left">
+<body style="background-image: url({{url_for('static', filename='wallpaper-master/back2.png')}});">
 
-    </div>
-    <div class="Center_right">
-
-    </div>
 
     <div>
-        <img class="MainLogo" src="{{url_for('static', filename='Main.PNG')}}" />
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink">
+                    <img src="{{url_for('static', filename='icon.png')}}" alt="" />
+                    <h1>Login</h1>
+                    <p>You can login</p>
+                </a>
+            </div>
+        </li>
+        <li class="hex">
+            <div class="hexIn">
+                <a class="hexLink">
+                    <img src="{{url_for('static', filename='icon.png')}}" alt="" />
+                    <h1>Register</h1>
+                    <p>You can resister</p>
+                </a>
+            </div>
+        </li>
     </div>
+
 </body>
 
 </html>
