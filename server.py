@@ -9,11 +9,6 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/user/<name>')
-def index_when_signed_in(name):
-    return render_template('home.html', name=name)
-
-
 @app.route('/login', methods=['POST'])
 def login():
     return "true"
