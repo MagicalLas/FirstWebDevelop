@@ -98,7 +98,7 @@
         background-color: deepskyblue;
     }
 
-    .boxs{
+    .boxs {
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
@@ -149,12 +149,38 @@
         background-color: goldenrod;
     }
 </style>
+<script>
+
+    var httpRequest;
+
+    function login_request() {
+        httpRequest = new XMLHttpRequest();
+
+        if (!httpRequest) {
+            alert("Networkin' Error");
+            return false;
+        }
+        httpRequest.onreadystatechange = login_event;
+        httpRequest.open("POST", "/login", true);
+        var id = document.getElementsByName('id')[0].value;
+        var pswd = document.getElementsByName('pass')[0].value;
+        httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        httpRequest.send("pass=" + pswd + "&id=" + id);
+    }
+
+    function login_event() {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            alert(httpRequest.responseText);
+        }
+    }
+</script>
 
 <body style="background-image: url(static/wallpaper-master/back2.png); overflow: hidden;">
 
 
     <div>
-        <li class="hex">
+        <li class="hex" onclick="login_request()">
             <div class="hexIn">
                 <a class="hexLink">
                     <img src="static/icon.png" alt="" />
@@ -173,6 +199,9 @@
             </div>
         </li>
     </div>
+
+    <input style="left: 50%;" type=text name=id>
+    <input style="left: 50%;" type=password name=pass>
     <div class="open">
         <div class="boxs">
 
