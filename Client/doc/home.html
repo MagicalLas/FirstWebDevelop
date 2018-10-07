@@ -1,22 +1,241 @@
-{% extends "basic.html" %}
-{% block title %}Home{% endblock %}
-{% block head %}
-    {{ super() }}
-{% endblock %}
-{% block body %}
-{% if name %}
-<h1>Welcome to our site, {{ name|title }}!</h1>
-{% else %}
-<h1>Welcome to our site!</h1>
-{% endif %}
-{% with messages = get_flashed_messages() %}
-    {% if messages %}
-        <ul class=flashes>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-{% endwith %}
-<input type="button" value="Click!" onclick="hello()">
-{% endblock %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>이름</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="static/Hexagon.css">
+</head>
+<style>
+    .MainLogo {
+        width: auto;
+        height: 30%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .Center_left {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        background-color: aquamarine;
+    }
+
+    .Center_right {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 50%;
+        background-color: cornflowerblue;
+    }
+
+    .hex {
+        width: 15%;
+        /* = 100 / 5 */
+    }
+
+    .hex:nth-child(2n+1) {
+        /* first hexagon of even rows */
+        margin-left: 8%;
+        /* = width of .hex / 2  to indent even rows */
+    }
+
+    .hex h1,
+    .hex p {
+        width: 100%;
+        padding: 5%;
+        box-sizing: border-box;
+        background-color: rgb(82, 140, 248, 0.9);
+        font-weight: 300;
+        -webkit-transition: -webkit-transform .2s ease-out, opacity .3s ease-out;
+        transition: transform .2s ease-out, opacity .3s ease-out;
+    }
+
+    .hex h1 {
+        bottom: 50%;
+        padding-top: 50%;
+        font-size: 1.5em;
+        z-index: 1;
+        -webkit-transform: translate3d(0, -100%, 0);
+        -ms-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    .hex h1::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        width: 10%;
+        text-align: center;
+        border-bottom: 1px solid #fff;
+    }
+
+    .hex p {
+        top: 50%;
+        padding-bottom: 50%;
+        -webkit-transform: translate3d(0, 100%, 0);
+        -ms-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+</style>
+
+<style>
+    .open {
+        animation: _open 2s 1s forwards;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: deepskyblue;
+    }
+
+    .boxs {
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    @keyframes _open {
+        0% {
+            top: 0%;
+        }
+        100% {
+            top: 100%;
+        }
+    }
+
+    .box_11 {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-70px) translateY(70px);
+        width: 100px;
+        height: 100px;
+        background-color: goldenrod;
+    }
+
+    .box_12 {
+        top: 50%;
+        left: 50%;
+        transform: translateX(70px) translateY(70px);
+        width: 100px;
+        height: 100px;
+        background-color: goldenrod;
+    }
+
+    .box_21 {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-70px) translateY(-70px);
+        width: 100px;
+        height: 100px;
+        background-color: goldenrod;
+    }
+
+    .box_22 {
+        top: 50%;
+        left: 50%;
+        transform: translateX(70px) translateY(-70px);
+        width: 100px;
+        height: 100px;
+        background-color: goldenrod;
+    }
+</style>
+<script>
+
+    var httpRequest;
+
+    function login_request() {
+        httpRequest = new XMLHttpRequest();
+
+        if (!httpRequest) {
+            alert("Networkin' Error");
+            return false;
+        }
+        httpRequest.onreadystatechange = login_event;
+        httpRequest.open("POST", "/login", true);
+        var id = document.getElementsByName('id')[0].value;
+        var pswd = document.getElementsByName('pass')[0].value;
+        httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        httpRequest.send("pass=" + pswd + "&id=" + id);
+    }
+
+    function login_event() {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            alert(httpRequest.responseText);
+        }
+    }
+
+    function register_request() {
+        httpRequest = new XMLHttpRequest();
+
+        if (!httpRequest) {
+            alert("Networkin' Error");
+            return false;
+        }
+        httpRequest.onreadystatechange = register_event;
+        httpRequest.open("POST", "/register", true);
+        var name = document.getElementsByName('name')[0].value;
+        var id = document.getElementsByName('id')[0].value;
+        var pwd = document.getElementsByName('pass')[0].value;
+        httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        httpRequest.send("name=" + name + "&id=" + id + "&pass=" + pwd);
+    }
+
+    function register_event() {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            alert(httpRequest.responseText);
+        }
+    }
+</script>
+
+<body style="background-image: url(static/wallpaper-master/back2.png); overflow: hidden;">
+
+
+    <div>
+        <li class="hex" onclick="login_request()">
+            <div class="hexIn">
+                <a class="hexLink">
+                    <img src="static/icon.png" alt="" />
+                    <h1>Login</h1>
+                    <p>You can login</p>
+                </a>
+            </div>
+        </li>
+        <li class="hex" onclick="register_request()">
+            <div class="hexIn">
+                <a class="hexLink">
+                    <img src="static/icon.png" alt="" />
+                    <h1>Register</h1>
+                    <p>You can register</p>
+                </a>
+            </div>
+        </li>
+    </div>
+
+    <input style="float: right" type=text name=name><br>
+    <input style="float: right" type=text name=id><br>
+    <input style="float: right" type=password name=pass><br>
+
+    <div class="open">
+        <div class="boxs">
+
+            <div class="box_11"></div>
+            <div class="box_12"></div>
+            <div class="box_21"></div>
+            <div class="box_22"></div>
+        </div>
+    </div>
+</body>
+
+</html>

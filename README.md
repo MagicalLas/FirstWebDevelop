@@ -7,6 +7,8 @@ FWD is GSM web development study in 2018. Using node.js, vue.js, and make morden
 
 TBD
 
+## 로고
+![FWD](https://github.com/Las-Wonho/FirstWebDevelop/blob/master/Main.png)
 
 ## Getting Started
 
@@ -17,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+pip install -r requirements.txt
 ```
 
 ### Installing
@@ -27,13 +29,7 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+docker pull laswonho/fwd
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -42,12 +38,10 @@ End with an example of getting some data out of the system or using it for a lit
 
 Explain how to run the automated tests for this system
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
 ```
-Give an example
+cd Server
+cd test
+pytest
 ```
 
 ## How To Contribute
@@ -56,11 +50,7 @@ Contributions are always welcome, either reporting issues/bugs or forking the re
 
 ### And coding style tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
+We using PEP8
 
 ## Deployment
 
@@ -76,7 +66,8 @@ We use GIt for versioning. For the versions available, see the [this repository]
 - [Unperknown](http://www.github.com/Unperknown)
 - [Mixergi](http://www.github.com/Mixergi)
 - [DawonChoi](http://www.github.com/DawonChoi)
-
+- [octavesop](http://www.github.com/octavesop)
+- [eunsun](https://github.com/1463)
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Las-Wonho/FirstWebDevelop/LICENSE.md) file for details
