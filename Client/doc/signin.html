@@ -1,0 +1,15 @@
+{% extends "basic.html" %}
+{% block title %}Home{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block body %}
+<h1>SIGN IN, whenever you want.</h1>
+<form action='/login' method=post>
+    Username:
+    <input type=text name=username value="">
+    Password:
+    <input type=password name=password value="">
+    <input type=submit value=Login>
+</form>
+{% endblock %}

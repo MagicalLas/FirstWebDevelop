@@ -1,4 +1,4 @@
-from flask import Flask, flash, redirect, render_template, request, url_for
+from flask import Flask, flash, redirect, render_template, request, url_for, session
 app = Flask(__name__, template_folder="Client/doc",
             static_folder="Client/static")
 app.secret_key = 'Literally secret'
@@ -11,7 +11,13 @@ def home():
 
 @app.route('/login', methods=['POST'])
 def login():
-    return "true"
+    if request.method == 'POST':
+        if request.form['username'] != 'admin' or request.form['password'] != 'secret':
+            flash('Login Failed')
+        else:
+            return redirect(url_for('home'))
+
+    return render_template('signin.html')
 
 
 @app.route('/info')
@@ -40,4 +46,4 @@ def internal_server_error(e):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(port=5000)
