@@ -1,9 +1,11 @@
 from flask import Flask, flash, redirect, render_template, request, url_for
+import sqlite3
 
 app = Flask(__name__, template_folder="Client/doc",
             static_folder="Client/static")
 app.secret_key = 'Literally secret'
 
+conn = sqlite3.connect("./Server/Database/Login.db", check_same_thread=False)
 
 @app.route('/')
 def home():
@@ -12,6 +14,15 @@ def home():
 
 @app.route('/login', methods=['POST'])
 def login():
+
+    id = request.form['id']
+    password = request.form['pass']
+    cur = conn.cursor()
+    cur.execute("select * from User where id='"+id+"' and password = '"+password+"'")
+    rows = cur.fetchall()
+
+    if(len(rows)==0):
+        return "false"
     return "true"
 
 
