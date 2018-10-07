@@ -7,3 +7,4 @@ flask-bootstrap
 flask-moment
 Jinja2
 uwsgi
+sqlite3
