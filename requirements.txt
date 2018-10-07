@@ -1,8 +1,10 @@
 pytest
 selenium
-flask
 numpy
+flask
 flask-script
 flask-bootstrap
 flask-moment
 Jinja2
+uwsgi
+sqlite3
