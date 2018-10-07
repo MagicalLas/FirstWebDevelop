@@ -87,7 +87,70 @@
     }
 </style>
 
-<body style="background-image: url(static/wallpaper-master/back2.png);">
+<style>
+    .open {
+        animation: _open 2s 1s forwards;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: deepskyblue;
+    }
+
+    .boxs{
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    @keyframes _open {
+        0% {
+            top: 0%;
+        }
+        100% {
+            top: 100%;
+        }
+    }
+
+    .box_11 {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-70px) translateY(70px);
+        width: 100px;
+        height: 100px;
+        background-color: goldenrod;
+    }
+
+    .box_12 {
+        top: 50%;
+        left: 50%;
+        transform: translateX(70px) translateY(70px);
+        width: 100px;
+        height: 100px;
+        background-color: goldenrod;
+    }
+
+    .box_21 {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-70px) translateY(-70px);
+        width: 100px;
+        height: 100px;
+        background-color: goldenrod;
+    }
+
+    .box_22 {
+        top: 50%;
+        left: 50%;
+        transform: translateX(70px) translateY(-70px);
+        width: 100px;
+        height: 100px;
+        background-color: goldenrod;
+    }
+</style>
+
+<body style="background-image: url(static/wallpaper-master/back2.png); overflow: hidden;">
 
 
     <div>
@@ -110,7 +173,15 @@
             </div>
         </li>
     </div>
+    <div class="open">
+        <div class="boxs">
 
+            <div class="box_11"></div>
+            <div class="box_12"></div>
+            <div class="box_21"></div>
+            <div class="box_22"></div>
+        </div>
+    </div>
 </body>
 
 </html>

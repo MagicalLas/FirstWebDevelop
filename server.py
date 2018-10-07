@@ -1,4 +1,5 @@
 from flask import Flask, flash, redirect, render_template, request, url_for
+
 app = Flask(__name__, template_folder="Client/doc",
             static_folder="Client/static")
 app.secret_key = 'Literally secret'
