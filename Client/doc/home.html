@@ -7,6 +7,9 @@
     <title>이름</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="static/Hexagon.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/shards-ui@latest/dist/css/shards.min.css">
 </head>
 <style>
     .hex {
@@ -112,7 +115,25 @@
 
 <body style="background-image: url(static/wallpaper-master/back2.png); overflow: hidden;">
 
-
+    <form class="was-validated">
+            <div class="column">
+                <div class="col-md-120">
+                    <label for="form-2-first-name">Name</label>
+                    <input type="text" class="form-control width200" placeholder="Input your name">
+                </div>
+    
+                <div class="col-md-120">
+                    <label for="form-2-first-name">ID</label>
+                    <input type="text" class="form-control width200" placeholder="Input your ID">
+                </div>
+                <div class="col-md-120">
+                        <label for="form-2-first-name">Password</label>
+                        <input type="text" class="form-control width200" placeholder="Input your Password">
+                    </div>
+            </div>
+        </form>
+    
+        
     <div>
         <li class="hex" onclick="login_request()">
             <div class="hexIn">
