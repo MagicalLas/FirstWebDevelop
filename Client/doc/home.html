@@ -9,33 +9,6 @@
     <link rel="stylesheet" type="text/css" href="static/Hexagon.css">
 </head>
 <style>
-    .MainLogo {
-        width: auto;
-        height: 30%;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-    .Center_left {
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        background-color: aquamarine;
-    }
-
-    .Center_right {
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 50%;
-        background-color: cornflowerblue;
-    }
-
     .hex {
         width: 15%;
         /* = 100 / 5 */
@@ -85,9 +58,7 @@
         -ms-transform: translate3d(0, 100%, 0);
         transform: translate3d(0, 100%, 0);
     }
-</style>
 
-<style>
     .open {
         animation: _open 2s 1s forwards;
         position: absolute;
@@ -98,11 +69,6 @@
         background-color: deepskyblue;
     }
 
-    .boxs {
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-    }
 
     @keyframes _open {
         0% {
@@ -113,40 +79,8 @@
         }
     }
 
-    .box_11 {
-        top: 50%;
-        left: 50%;
-        transform: translateX(-70px) translateY(70px);
-        width: 100px;
-        height: 100px;
-        background-color: goldenrod;
-    }
-
-    .box_12 {
-        top: 50%;
-        left: 50%;
-        transform: translateX(70px) translateY(70px);
-        width: 100px;
-        height: 100px;
-        background-color: goldenrod;
-    }
-
-    .box_21 {
-        top: 50%;
-        left: 50%;
-        transform: translateX(-70px) translateY(-70px);
-        width: 100px;
-        height: 100px;
-        background-color: goldenrod;
-    }
-
-    .box_22 {
-        top: 50%;
-        left: 50%;
-        transform: translateX(70px) translateY(-70px);
-        width: 100px;
-        height: 100px;
-        background-color: goldenrod;
+    .width200{
+        width: 200px;
     }
 </style>
 <script>
@@ -200,17 +134,7 @@
         </li>
     </div>
 
-    <input style="left: 50%;" type=text name=id>
-    <input style="left: 50%;" type=password name=pass>
-    <div class="open">
-        <div class="boxs">
-
-            <div class="box_11"></div>
-            <div class="box_12"></div>
-            <div class="box_21"></div>
-            <div class="box_22"></div>
-        </div>
-    </div>
+    
 </body>
 
 </html>
