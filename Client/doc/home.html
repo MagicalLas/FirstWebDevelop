@@ -7,37 +7,13 @@
     <title>이름</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="static/Hexagon.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/shards-ui@latest/dist/css/shards.min.css">
 </head>
 <style>
-    .MainLogo {
-        width: auto;
-        height: 30%;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-    .Center_left {
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        background-color: aquamarine;
-    }
-
-    .Center_right {
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 50%;
-        background-color: cornflowerblue;
-    }
-
     .hex {
-        width: 15%;
+        width: 200px;
         /* = 100 / 5 */
     }
 
@@ -85,9 +61,7 @@
         -ms-transform: translate3d(0, 100%, 0);
         transform: translate3d(0, 100%, 0);
     }
-</style>
 
-<style>
     .open {
         animation: _open 2s 1s forwards;
         position: absolute;
@@ -98,11 +72,6 @@
         background-color: deepskyblue;
     }
 
-    .boxs {
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-    }
 
     @keyframes _open {
         0% {
@@ -113,40 +82,13 @@
         }
     }
 
-    .box_11 {
-        top: 50%;
-        left: 50%;
-        transform: translateX(-70px) translateY(70px);
-        width: 100px;
-        height: 100px;
-        background-color: goldenrod;
+    .width200 {
+        width: 200px;
     }
 
-    .box_12 {
-        top: 50%;
-        left: 50%;
-        transform: translateX(70px) translateY(70px);
-        width: 100px;
-        height: 100px;
-        background-color: goldenrod;
-    }
-
-    .box_21 {
-        top: 50%;
-        left: 50%;
-        transform: translateX(-70px) translateY(-70px);
-        width: 100px;
-        height: 100px;
-        background-color: goldenrod;
-    }
-
-    .box_22 {
-        top: 50%;
-        left: 50%;
-        transform: translateX(70px) translateY(-70px);
-        width: 100px;
-        height: 100px;
-        background-color: goldenrod;
+    button {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 </style>
 <script>
@@ -178,6 +120,25 @@
 
 <body style="background-image: url(static/wallpaper-master/back2.png); overflow: hidden;">
 
+    <form class="was-validated">
+        <div class="column">
+            <div class="col-md-120">
+                <label for="form-2-first-name">Name</label>
+                <input type="text" class="form-control width200" placeholder="Input your name">
+            </div>
+
+            <div class="col-md-120">
+                <label for="form-2-first-name">ID</label>
+                <input type="text" class="form-control width200" placeholder="Input your ID">
+            </div>
+            <div class="col-md-120">
+                <label for="form-2-first-name">Password</label>
+                <input type="text" class="form-control width200" placeholder="Input your Password">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary">Register</button>
+    </form>
+
 
     <div>
         <li class="hex" onclick="login_request()">
@@ -200,17 +161,7 @@
         </li>
     </div>
 
-    <input style="left: 50%;" type=text name=id>
-    <input style="left: 50%;" type=password name=pass>
-    <div class="open">
-        <div class="boxs">
 
-            <div class="box_11"></div>
-            <div class="box_12"></div>
-            <div class="box_21"></div>
-            <div class="box_22"></div>
-        </div>
-    </div>
 </body>
 
 </html>
