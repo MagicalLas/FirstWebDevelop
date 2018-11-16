@@ -82,8 +82,13 @@
         }
     }
 
-    .width200{
+    .width200 {
         width: 200px;
+    }
+
+    button {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 </style>
 <script>
@@ -116,25 +121,25 @@
 <body style="background-image: url(static/wallpaper-master/back2.png); overflow: hidden;">
 
     <form class="was-validated">
-            <div class="column">
-                <div class="col-md-120">
-                    <label for="form-2-first-name">Name</label>
-                    <input type="text" class="form-control width200" placeholder="Input your name">
-                </div>
-    
-                <div class="col-md-120">
-                    <label for="form-2-first-name">ID</label>
-                    <input type="text" class="form-control width200" placeholder="Input your ID">
-                </div>
-                <div class="col-md-120">
-                        <label for="form-2-first-name">Password</label>
-                        <input type="text" class="form-control width200" placeholder="Input your Password">
-                    </div>
+        <div class="column">
+            <div class="col-md-120">
+                <label for="form-2-first-name">Name</label>
+                <input type="text" class="form-control width200" placeholder="Input your name">
             </div>
-            <button type="button" class="btn btn-primary">Register</button>
-        </form>
-    
-        
+
+            <div class="col-md-120">
+                <label for="form-2-first-name">ID</label>
+                <input type="text" class="form-control width200" placeholder="Input your ID">
+            </div>
+            <div class="col-md-120">
+                <label for="form-2-first-name">Password</label>
+                <input type="text" class="form-control width200" placeholder="Input your Password">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary">Register</button>
+    </form>
+
+
     <div>
         <li class="hex" onclick="login_request()">
             <div class="hexIn">
@@ -156,7 +161,7 @@
         </li>
     </div>
 
-    
+
 </body>
 
 </html>
